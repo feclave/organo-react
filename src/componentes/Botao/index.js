@@ -1,13 +1,9 @@
-import './Botao.css'
+import './botao.css'
 
-const Botao = (props) => {
-    return(
-        <button className='botao'>
-            {props.children}
-        </button>
-    )
+const Botao = ({texto}) => {
+    return <button className="botao">
+        {texto}
+    </button>
 }
 
 export default Botao
-
-//a propriedade children possibilita que tudo o que estiver dentro do componente será parte de sua estrutura, seja texto, imagem, etc...
