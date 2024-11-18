@@ -6,15 +6,6 @@ import { useState } from 'react'
 
 const Formulario = (props) => {
     
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'Ux e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
     
     //O useState permite criar variáveis de estado em componentes funcionais, com um valor inicial e uma função para atualizar esse valor.
     const [nome, setNome] = useState('')
@@ -30,6 +21,10 @@ const Formulario = (props) => {
             imagem,
             time
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     return (
@@ -59,7 +54,7 @@ const Formulario = (props) => {
                 <ListaSuspensa
                  obrigatorio={true}
                  label='Time' 
-                 itens={times}
+                 itens={props.times}
                  valor={time}
                  aoAlterado={valor => setTime(valor)}
                  />
